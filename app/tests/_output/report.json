@@ -1,0 +1,141 @@
+{
+    "event": "suiteStart",
+    "suite": "functional",
+    "tests": 1
+}{
+    "event": "testStart",
+    "suite": "functional",
+    "test": "Signup for a Larabook Account (SignUpCept.php)"
+}{
+    "event": "test",
+    "suite": "functional",
+    "test": "Signup for a Larabook Account (SignUpCept.php)",
+    "status": "error",
+    "time": 0.96270799636841,
+    "trace": [
+        {
+            "file": "\/home\/vagrant\/Sites\/larabook\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Connection.php",
+            "line": 285,
+            "function": "prepare",
+            "class": "PDO",
+            "type": "->",
+            "args": [
+                "select * from `users` where `username` = ? limit 1"
+            ]
+        },
+        {
+            "file": "\/home\/vagrant\/Sites\/larabook\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Connection.php",
+            "line": 592,
+            "function": "Illuminate\\Database\\{closure}",
+            "class": "Illuminate\\Database\\Connection",
+            "type": "->",
+            "args": [
+                {},
+                "select * from `users` where `username` = ? limit 1",
+                [
+                    "John Doe"
+                ]
+            ]
+        },
+        {
+            "file": "\/home\/vagrant\/Sites\/larabook\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Connection.php",
+            "line": 556,
+            "function": "runQueryCallback",
+            "class": "Illuminate\\Database\\Connection",
+            "type": "->",
+            "args": [
+                "select * from `users` where `username` = ? limit 1",
+                [
+                    "John Doe"
+                ],
+                {}
+            ]
+        },
+        {
+            "file": "\/home\/vagrant\/Sites\/larabook\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Connection.php",
+            "line": 290,
+            "function": "run",
+            "class": "Illuminate\\Database\\Connection",
+            "type": "->",
+            "args": [
+                "select * from `users` where `username` = ? limit 1",
+                [
+                    "John Doe"
+                ],
+                {}
+            ]
+        },
+        {
+            "file": "\/home\/vagrant\/Sites\/larabook\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php",
+            "line": 1359,
+            "function": "select",
+            "class": "Illuminate\\Database\\Connection",
+            "type": "->",
+            "args": [
+                "select * from `users` where `username` = ? limit 1",
+                [
+                    "John Doe"
+                ]
+            ]
+        },
+        {
+            "file": "\/home\/vagrant\/Sites\/larabook\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php",
+            "line": 1349,
+            "function": "runSelect",
+            "class": "Illuminate\\Database\\Query\\Builder",
+            "type": "->",
+            "args": []
+        },
+        {
+            "file": "\/home\/vagrant\/Sites\/larabook\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php",
+            "line": 1336,
+            "function": "getFresh",
+            "class": "Illuminate\\Database\\Query\\Builder",
+            "type": "->",
+            "args": [
+                [
+                    "*"
+                ]
+            ]
+        },
+        {
+            "file": "\/home\/vagrant\/Sites\/larabook\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php",
+            "line": 1321,
+            "function": "get",
+            "class": "Illuminate\\Database\\Query\\Builder",
+            "type": "->",
+            "args": [
+                [
+                    "*"
+                ]
+            ]
+        },
+        {
+            "file": "\/home\/vagrant\/Sites\/larabook\/app\/tests\/functional\/FunctionalTester.php",
+            "line": 589,
+            "function": "runStep",
+            "class": "Codeception\\Scenario",
+            "type": "->",
+            "args": [
+                {
+                    "executed": true
+                }
+            ]
+        },
+        {
+            "file": "\/home\/vagrant\/Sites\/larabook\/app\/tests\/functional\/SignUpCept.php",
+            "line": 20,
+            "function": "seeRecord",
+            "class": "FunctionalTester",
+            "type": "->",
+            "args": [
+                "users",
+                {
+                    "username": "John Doe"
+                }
+            ]
+        }
+    ],
+    "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'larabook.users' doesn't exist (SQL: select * from `users` where `username` = John Doe limit 1)",
+    "output": ""
+}
