@@ -8,7 +8,7 @@ $I->click('Sign Up');
 $I->seeCurrentUrlEquals('/register');
 
 $I->fillField('Username:', 'John Doe');
-$I->fillField('Email:', 'example.com');
+$I->fillField('Email:', 'john@example.com');
 $I->fillField('Password:', 'demo');
 $I->fillField('Password Confirmation:', 'demo');
 $I->click('Sign Up');
@@ -18,3 +18,5 @@ $I->see('Larabook');
 $I->seeRecord('users', [
 	'username' => 'John Doe'
 ]);
+
+$I->assertTrue(Auth::check());

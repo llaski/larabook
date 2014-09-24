@@ -33,7 +33,7 @@ $env = $app->detectEnvironment(function()
 	else
 		return 'production';
 });
-
+// dd($_SERVER);
 /*
 |--------------------------------------------------------------------------
 | Bind Paths

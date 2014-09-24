@@ -2,3 +2,17 @@ body {
 	padding-top: 70px;
 	transition: all 1s;
 }
+
+.container {
+	h1:first-of-type {
+		margin-top: 0;
+	}
+}
+
+.nav-gravatar {
+	float: left;
+	position: relative;
+	top: -5px;
+	left: -6px;
+	border: 1px solid #555;
+}
